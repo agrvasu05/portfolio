@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Vasu Agrawal: AI commercials, viral POV reels and animated explainers. PUMA and Red Bull spec ads in 4K, 10.5M views on @skyrunnerpov.">
+<meta property="og:title" content="Vasu Agrawal: AI ads and reels">
+<meta property="og:description" content="PUMA and Red Bull spec ads in 4K, viral AI POV reels (4.35M top), and the Explaining The Life animated series.">
+<meta property="og:image" content="https://agrvasu05.github.io/portfolio/media/puma.jpg">
+<meta property="og:url" content="https://agrvasu05.github.io/portfolio/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<title>Vasu Agrawal · AI ads and reels</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an edit bay. Each work is a "clip" with a slate of real metadata (runtime, aspect, master size, tools). Dark-first, one accent = the REC light. */
+:root{
+  --bg:#0d0e11; --panel:#16181d; --line:#2a2d35; --fg:#eceae6; --muted:#9b9ca3; --rec:#ff4b3e; --rec-ink:#0d0e11;
+  --display:"Big Shoulders Display", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --body:"Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --wrap:1180px;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){ --bg:#f1f2f4; --panel:#ffffff; --line:#d8dae0; --fg:#121318; --muted:#5b5e68; --rec:#d6302a; --rec-ink:#ffffff; color-scheme:light } }
+:root[data-theme="light"]{ --bg:#f1f2f4; --panel:#ffffff; --line:#d8dae0; --fg:#121318; --muted:#5b5e68; --rec:#d6302a; --rec-ink:#ffffff; color-scheme:light }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{animation:none!important; transition:none!important} }
+body{background:var(--bg); color:var(--fg); font-family:var(--body); font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased}
+body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px); z-index:10; background:var(--bg)}
+a{color:inherit}
+a:focus-visible, button:focus-visible, video:focus-visible{outline:2px solid var(--rec); outline-offset:3px}
+.wrap{max-width:var(--wrap); margin:0 auto; padding-left:max(16px, env(safe-area-inset-left,0px)); padding-right:max(16px, env(safe-area-inset-right,0px))}
+.mono{font-family:var(--mono); font-size:12.5px; letter-spacing:.02em; font-variant-numeric:tabular-nums}
+.label{font-family:var(--mono); font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+
+/* top bar */
+.bar{position:sticky; top:env(safe-area-inset-top,0px); z-index:9; background:color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex; align-items:center; justify-content:space-between; gap:16px; padding-block:12px}
+.who{display:flex; align-items:center; gap:10px; font-family:var(--display); font-weight:800; font-size:20px; letter-spacing:.04em; text-transform:uppercase; text-decoration:none; white-space:nowrap}
+.dot{width:10px; height:10px; border-radius:50%; background:var(--rec); box-shadow:0 0 0 4px color-mix(in srgb, var(--rec) 22%, transparent); flex:none}
+@media (prefers-reduced-motion: no-preference){ .dot{animation:blink 1.6s steps(2,end) infinite} }
+@keyframes blink{50%{opacity:.35}}
+.nav{display:flex; gap:18px; flex-wrap:wrap; justify-content:flex-end}
+.nav a{font-family:var(--mono); font-size:12px; letter-spacing:.12em; text-transform:uppercase; text-decoration:none; color:var(--muted)}
+.nav a:hover{color:var(--fg)}
+@media (max-width:640px){ .nav{display:none} }
+
+/* hero */
+.hero{padding-block:56px 40px; display:grid; gap:22px}
+.hero h1{font-family:var(--display); font-weight:900; text-transform:uppercase; line-height:.86; letter-spacing:.005em; font-size:clamp(64px, 13vw, 176px); margin:0; text-wrap:balance}
+.hero h1 span{color:var(--rec)}
+.hero p.lede{max-width:60ch; font-size:clamp(17px, 2.1vw, 21px); margin:0; color:var(--fg)}
+.slate{display:flex; flex-wrap:wrap; gap:0; border:1px solid var(--line); border-radius:4px; overflow:hidden; width:fit-content; max-width:100%}
+.slate div{padding:10px 16px; border-right:1px solid var(--line); display:grid; gap:2px; min-width:0}
+.slate div:last-child{border-right:0}
+.slate b{font-family:var(--display); font-weight:800; font-size:28px; line-height:1; letter-spacing:.02em}
+.slate span{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+@media (max-width:640px){ .slate div{flex:1 1 45%; border-bottom:1px solid var(--line)} }
+
+/* sections */
+section{padding-block:44px; border-top:1px solid var(--line)}
+.sec-head{display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:26px}
+.sec-head h2{font-family:var(--display); font-weight:800; text-transform:uppercase; font-size:clamp(36px, 5.4vw, 60px); line-height:.95; margin:0; letter-spacing:.01em}
+.sec-head p{margin:0; color:var(--muted); max-width:52ch}
+
+/* clip: feature commercials */
+.clip{display:grid; gap:18px; margin-bottom:46px}
+.screen{position:relative; background:#000; border-radius:4px; overflow:hidden; aspect-ratio:16/9; max-width:100%}
+.screen video{display:block; width:100%; height:100%; object-fit:contain; background:#000}
+.tc{position:absolute; top:12px; left:12px; display:flex; gap:8px; align-items:center; pointer-events:none; font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#fff; background:rgba(0,0,0,.55); padding:5px 9px; border-radius:3px}
+.tc i{width:7px; height:7px; border-radius:50%; background:#ff4b3e; display:block}
+.clip-info{display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); gap:28px; align-items:start}
+@media (max-width:820px){ .clip-info{grid-template-columns:1fr; gap:18px} }
+.clip h3{font-family:var(--display); font-weight:800; text-transform:uppercase; font-size:clamp(30px, 4vw, 44px); line-height:.95; margin:0 0 10px; letter-spacing:.015em}
+.clip h3 small{display:block; font-family:var(--mono); font-weight:400; font-size:12px; letter-spacing:.14em; color:var(--muted); margin-bottom:8px}
+.clip p{margin:0 0 10px; max-width:62ch}
+.disclaim{font-size:13.5px; color:var(--muted); border-left:2px solid var(--rec); padding-left:10px; margin-top:12px}
+.meta{display:grid; grid-template-columns:auto minmax(0,1fr); gap:7px 16px; margin:0; padding:14px 16px; background:var(--panel); border:1px solid var(--line); border-radius:4px}
+.meta dt{font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); padding-top:2px}
+.meta dd{margin:0; font-size:14.5px; min-width:0}
+.links{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
+.btn{display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase; text-decoration:none; padding:10px 14px; border:1px solid var(--line); border-radius:3px; background:transparent; color:var(--fg); cursor:pointer}
+.btn:hover{border-color:var(--fg)}
+.btn.primary{background:var(--rec); border-color:var(--rec); color:var(--rec-ink)}
+.btn.primary:hover{filter:brightness(1.08)}
+
+/* vertical pieces */
+.pair{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:28px}
+@media (max-width:760px){ .pair{grid-template-columns:1fr} }
+.vpiece{display:grid; grid-template-columns:minmax(0,220px) minmax(0,1fr); gap:18px; align-items:start}
+@media (max-width:420px){ .vpiece{grid-template-columns:1fr} }
+.vscreen{aspect-ratio:9/16; background:#000; border-radius:4px; overflow:hidden; max-width:100%}
+.vscreen video{display:block; width:100%; height:100%; object-fit:cover}
+.vpiece h4{font-family:var(--display); font-weight:800; text-transform:uppercase; font-size:28px; line-height:.95; margin:0 0 8px; letter-spacing:.02em}
+.vpiece p{margin:0 0 8px; font-size:15px}
+
+/* reels strip */
+.reels{display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); gap:14px}
+@media (max-width:1000px){ .reels{grid-template-columns:repeat(3, minmax(0,1fr))} }
+@media (max-width:620px){ .reels{grid-template-columns:repeat(2, minmax(0,1fr))} }
+.reel{display:grid; gap:8px; min-width:0}
+.reel .views{font-family:var(--display); font-weight:800; font-size:30px; line-height:1; letter-spacing:.02em}
+.reel .views em{font-style:normal; font-family:var(--mono); font-weight:400; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-left:4px}
+.reel p{margin:0; font-size:14px; color:var(--muted)}
+.reel a{font-family:var(--mono); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--fg)}
+.asof{margin-top:16px}
+
+/* explainer series */
+.vpiece.solo{max-width:620px}
+.series{margin-top:44px; padding-top:28px; border-top:1px solid var(--line)}
+.series-head{max-width:720px; margin-bottom:20px}
+.series-head h3{font-family:var(--display); font-weight:800; text-transform:uppercase; font-size:34px; line-height:.95; margin:6px 0 10px; letter-spacing:.02em}
+.series-head p{margin:0; font-size:15px}
+.reels.four{grid-template-columns:repeat(4, minmax(0,1fr))}
+@media (max-width:820px){ .reels.four{grid-template-columns:repeat(2, minmax(0,1fr))} }
+
+/* pages */
+.pages{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:18px}
+@media (max-width:900px){ .pages{grid-template-columns:1fr} }
+.page{border:1px solid var(--line); border-radius:4px; padding:20px; display:grid; gap:12px; align-content:start; background:var(--panel)}
+.page .handle{font-family:var(--display); font-weight:800; font-size:30px; line-height:1; letter-spacing:.02em; text-decoration:none; word-break:break-word}
+.page .handle:hover{color:var(--rec)}
+.page p{margin:0; font-size:15px}
+.stats{display:flex; flex-wrap:wrap; gap:6px 18px}
+.stats span{font-family:var(--mono); font-size:12.5px; color:var(--muted)}
+.stats b{color:var(--fg); font-weight:500}
+.page .sample{display:grid; grid-template-columns:96px minmax(0,1fr); gap:12px; align-items:center}
+.page .sample .vscreen{border-radius:3px}
+.page .sample p{font-size:13.5px; color:var(--muted)}
+
+/* process + tools */
+.split{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:36px}
+@media (max-width:820px){ .split{grid-template-columns:1fr} }
+.steps{list-style:none; margin:0; padding:0; display:grid; gap:0; counter-reset:s}
+.steps li{display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; padding:12px 0; border-bottom:1px solid var(--line); counter-increment:s}
+.steps li::before{content:counter(s, decimal-leading-zero); font-family:var(--mono); font-size:12px; color:var(--rec); padding-top:3px}
+.steps b{font-weight:600}
+.tools{display:grid; gap:16px}
+.tools div{display:grid; gap:6px}
+.chips{display:flex; flex-wrap:wrap; gap:6px}
+.chips span{font-size:13.5px; padding:4px 10px; border:1px solid var(--line); border-radius:3px}
+
+/* contact */
+.contact h2{font-family:var(--display); font-weight:900; text-transform:uppercase; font-size:clamp(44px, 8vw, 96px); line-height:.9; margin:0 0 18px; text-wrap:balance}
+.mail{display:flex; flex-wrap:wrap; gap:10px; align-items:center}
+.mail code{font-family:var(--mono); font-size:clamp(15px, 2.4vw, 20px); padding:10px 14px; border:1px solid var(--line); border-radius:3px; user-select:all; background:var(--panel); word-break:break-all}
+.foot{padding-block:28px 40px; color:var(--muted); font-size:13px; border-top:1px solid var(--line); display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:space-between}
+</style>
+
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a class="who" href="#top"><span class="dot" aria-hidden="true"></span>Vasu Agrawal</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#ads">Ads</a><a href="#reels">Viral reels</a><a href="#pages">Pages</a><a href="#process">Process</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="label">AI commercial director · Noida, India · IST (GMT+5:30)</div>
+    <h1>Ads that look<br>shot. <span>Aren't.</span></h1>
+    <p class="lede">I write, generate, edit and finish AI commercials end to end: reference sheets, keyframes, Seedance and Kling shots, voice, music and a 4K master. The same storytelling runs my POV page, where one reel passed 4.3 million views.</p>
+    <div class="slate" role="list">
+      <div role="listitem"><b>4.35M</b><span>views, top reel</span></div>
+      <div role="listitem"><b>10.5M</b><span>views on SkyRunner reels</span></div>
+      <div role="listitem"><b>13K</b><span>followers, @skyrunnerpov</span></div>
+      <div role="listitem"><b>4096×2304</b><span>ad masters</span></div>
+    </div>
+  </div>
+
+  <section id="ads">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Commercials</h2>
+        <p>Web previews play here at 720p. The 4K masters are on Google Drive; download them to watch at full resolution.</p>
+      </div>
+
+      <article class="clip">
+        <div class="screen">
+          <video id="v-puma" controls preload="metadata" playsinline poster="media/puma.jpg"><source src="media/puma.mp4" type="video/mp4"></video>
+          <div class="tc" aria-hidden="true"><i></i>00:44 · 16:9</div>
+        </div>
+        <div class="clip-info">
+          <div>
+            <h3><small>PUMA · spec commercial</small>Forever Faster</h3>
+            <p>A runner and a puma race across Manhattan rooftops at dusk, cut shot for shot against each other, until his final leap turns into the PUMA cat. Narration: "Every city has its predator. Tonight, it met its rival. PUMA. Forever faster."</p>
+            <p>I wrote the concept, built the reference sheets, generated six Seedance 2.5 shots with matching framing, made the leap-to-logo morph frame by frame, and cut it to one continuous score.</p>
+            <p class="disclaim">Spec ad. Not made for, affiliated with or endorsed by PUMA.</p>
+            <div class="links">
+              <a class="btn primary" href="https://drive.google.com/file/d/1JF7XVmYOw2r4VwYeHNP1hoNdXts-oSSZ/view" target="_blank" rel="noopener">4K master on Drive ↗</a>
+            </div>
+          </div>
+          <dl class="meta">
+            <dt>Runtime</dt><dd>43.9 s</dd>
+            <dt>Master</dt><dd>4096×2304, H.264</dd>
+            <dt>Shots</dt><dd>32 cuts from 7 generations</dd>
+            <dt>Video</dt><dd>Seedance 2.5 (reference + first/last-frame modes)</dd>
+            <dt>Voice</dt><dd>ElevenLabs narrator</dd>
+            <dt>Finish</dt><dd>Python + FFmpeg edit and mix, Topaz 4K upscale in Runway</dd>
+          </dl>
+        </div>
+      </article>
+
+      <article class="clip">
+        <div class="screen">
+          <video id="v-redbull" controls preload="metadata" playsinline poster="media/redbull.jpg"><source src="media/redbull.mp4" type="video/mp4"></video>
+          <div class="tc" aria-hidden="true"><i></i>00:47 · 16:9</div>
+        </div>
+        <div class="clip-info">
+          <div>
+            <h3><small>Red Bull · spec commercial</small>Red Bull F1</h3>
+            <p>A driver cracks a can on the grid, the car turns into a charging bull, and the race ends as the Red Bull logo. I played the driver myself, built from a cast sheet so the face holds across eight scenes.</p>
+            <p>Eight Seedance 2.5 scenes, with retakes only for the shots that broke continuity. I isolated the spoken line from the clip audio and set the song so its drop lands on the launch.</p>
+            <p class="disclaim">Spec ad. Not made for, affiliated with or endorsed by Red Bull. The concept follows Kaye Creatives' Red Bull spec; the cast, shots, edit and sound are mine.</p>
+            <div class="links">
+              <a class="btn primary" href="https://drive.google.com/file/d/1DllwxaVylXzAh4oIf80xec_T0ZBMLCn9/view" target="_blank" rel="noopener">4K master on Drive ↗</a>
+              <a class="btn" href="https://www.instagram.com/reel/DfZq-5YFVUb/" target="_blank" rel="noopener">On Instagram ↗</a>
+            </div>
+          </div>
+          <dl class="meta">
+            <dt>Runtime</dt><dd>47.3 s</dd>
+            <dt>Master</dt><dd>4096×2304, H.264</dd>
+            <dt>Scenes</dt><dd>8 scenes, one consistent cast</dd>
+            <dt>Video</dt><dd>Seedance 2.5 with cast, helmet and rival-car sheets</dd>
+            <dt>Sound</dt><dd>Dialogue isolated with Demucs, music timed to the drop</dd>
+            <dt>Finish</dt><dd>Topaz 4K upscale in Runway, joined without re-encoding</dd>
+          </dl>
+        </div>
+      </article>
+
+        <article class="vpiece solo">
+          <div class="vscreen"><video controls preload="metadata" playsinline poster="media/botaveil.jpg"><source src="media/botaveil.mp4" type="video/mp4"></video></div>
+          <div>
+            <div class="label">Product film · 9:16 · 10 s</div>
+            <h4>Botaveil olive planter</h4>
+            <p>A product reveal for Botaveil, the scented home-decor brand I run. The camera slides under a shutter into a sunlit penthouse and pushes in on the planter, ending on the logo card.</p>
+            <p class="mono" style="color:var(--muted)">AI shots made from the real product photo</p>
+          </div>
+        </article>
+
+      <div class="series">
+        <div class="series-head">
+          <div class="label">Animated explainer series · 9:16 · 25–35 s</div>
+          <h3>Explaining The Life</h3>
+          <p>Body-science explainers I write and animate for <a href="https://www.instagram.com/explaining_thelife/" target="_blank" rel="noopener">@explaining_thelife</a>. Each one opens with a test you can try on yourself, then cuts inside the body with 2D characters and word-by-word captions.</p>
+        </div>
+        <div class="reels four">
+          <div class="reel">
+            <div class="vscreen"><video controls preload="none" playsinline poster="media/tongue.jpg"><source src="media/tongue.mp4" type="video/mp4"></video></div>
+            <div class="views">24.2K<em>views</em></div>
+            <p>"Can you roll your tongue?" It's not only your genes.</p>
+            <a href="https://www.instagram.com/reel/DfEXk7UgHWt/" target="_blank" rel="noopener">Instagram ↗</a>
+          </div>
+          <div class="reel">
+            <div class="vscreen"><video controls preload="none" playsinline poster="media/earlobe.jpg"><source src="media/earlobe.mp4" type="video/mp4"></video></div>
+            <div class="views">3.3K<em>views</em></div>
+            <p>Is your earlobe free or attached? What school got wrong.</p>
+            <a href="https://www.instagram.com/reel/DfR1pkDDCvS/" target="_blank" rel="noopener">Instagram ↗</a>
+          </div>
+          <div class="reel">
+            <div class="vscreen"><video controls preload="none" playsinline poster="media/sneeze.jpg"><source src="media/sneeze.mp4" type="video/mp4"></video></div>
+            <div class="views">2.3K<em>views</em></div>
+            <p>Why you should never hold in a sneeze, shown in cutaway.</p>
+            <a href="https://www.instagram.com/reel/DeoC4vQlB02/" target="_blank" rel="noopener">Instagram ↗</a>
+          </div>
+          <div class="reel">
+            <div class="vscreen"><video controls preload="none" playsinline poster="media/tattoo.jpg"><source src="media/tattoo.mp4" type="video/mp4"></video></div>
+            <div class="views">2.0K<em>views</em></div>
+            <p>Where tattoo ink goes: immune cells that hold it for life.</p>
+            <a href="https://www.instagram.com/reel/De2NYzfDeCc/" target="_blank" rel="noopener">Instagram ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reels">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Viral AI reels</h2>
+        <p>First-person stories on @skyrunnerpov: a calm moment, something goes wrong, an escape. Each one is built to hold attention for all 15 seconds.</p>
+      </div>
+      <div class="reels">
+        <div class="reel">
+          <div class="vscreen"><video controls preload="none" playsinline poster="media/tsunami.jpg"><source src="media/tsunami.mp4" type="video/mp4"></video></div>
+          <div class="views">4.35M<em>views</em></div>
+          <p>A tsunami hits while you sip iced tea on the roof.</p>
+          <a href="https://www.instagram.com/reel/Detmsl2xWQ1/" target="_blank" rel="noopener">Instagram ↗</a>
+        </div>
+        <div class="reel">
+          <div class="vscreen"><video controls preload="none" playsinline poster="media/slide.jpg"><source src="media/slide.mp4" type="video/mp4"></video></div>
+          <div class="views">2.88M<em>views</em></div>
+          <p>"Whatever happens, don't stop." Then the slide cracks.</p>
+          <a href="https://www.instagram.com/reel/De3mrqiiKAj/" target="_blank" rel="noopener">Instagram ↗</a>
+        </div>
+        <div class="reel">
+          <div class="vscreen"><video controls preload="none" playsinline poster="media/glass.jpg"><source src="media/glass.mp4" type="video/mp4"></video></div>
+          <div class="views">1.16M<em>views</em></div>
+          <p>A glass slide wrapped around a skyscraper, 70 floors up.</p>
+          <a href="https://www.instagram.com/reel/De9JfZQEfa3/" target="_blank" rel="noopener">Instagram ↗</a>
+        </div>
+        <div class="reel">
+          <div class="vscreen"><video controls preload="none" playsinline poster="media/jetpack.jpg"><source src="media/jetpack.mp4" type="video/mp4"></video></div>
+          <div class="views">526K<em>views</em></div>
+          <p>The tsunami alert goes off and the jetpack fails mid-air.</p>
+          <a href="https://www.instagram.com/reel/DewUTaUB4xP/" target="_blank" rel="noopener">Instagram ↗</a>
+        </div>
+        <div class="reel">
+          <div class="vscreen"><video controls preload="none" playsinline poster="media/planewing.jpg"><source src="media/planewing.mp4" type="video/mp4"></video></div>
+          <div class="views">84.8K<em>FB views</em></div>
+          <p>A backflip off a plane wing over New York.</p>
+          <a href="https://www.facebook.com/1312691051938543" target="_blank" rel="noopener">Facebook page ↗</a>
+        </div>
+      </div>
+      <p class="mono asof" style="color:var(--muted)">Instagram play counts as of 7 Nov 2026.</p>
+    </div>
+  </section>
+
+  <section id="pages">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>My pages</h2>
+        <p>Channels I create for and run day to day.</p>
+      </div>
+      <div class="pages">
+        <article class="page">
+          <div class="label">AI POV stories</div>
+          <a class="handle" href="https://www.instagram.com/skyrunnerpov/" target="_blank" rel="noopener">@skyrunnerpov ↗</a>
+          <p>First-person AI videos of rooftop runs, water slides and disasters, posted to Instagram and Facebook.</p>
+          <div class="stats"><span><b>13K</b> followers</span><span><b>10.5M</b> views on grid reels</span><span><b>4</b> reels over 500K</span></div>
+          <p class="mono" style="color:var(--muted)">Also on Facebook as SkyRunner POV</p>
+        </article>
+        <article class="page">
+          <div class="label">Biology explainers</div>
+          <a class="handle" href="https://www.instagram.com/explaining_thelife/" target="_blank" rel="noopener">@explaining_thelife ↗</a>
+          <p>Short explainers about the human body, made as hand-painted 2D and animated characters.</p>
+          <div class="stats"><span><b>116</b> posts</span><span><b>306</b> followers</span><span><b>24.2K</b> top original reel</span></div>
+          <a class="mono" href="#ads" style="color:var(--muted)">Four of its reels are shown under Ads ↑</a>
+        </article>
+        <article class="page">
+          <div class="label">Brand I run</div>
+          <a class="handle" href="https://www.instagram.com/botaveil/" target="_blank" rel="noopener">@botaveil ↗</a>
+          <p>Scented home decor from Delhi NCR. I make its product films, reels and ad creatives.</p>
+          <div class="stats"><span><b>207</b> posts</span><span><b>308</b> followers</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap split">
+      <div>
+        <div class="sec-head"><h2>How an ad gets made</h2></div>
+        <ol class="steps">
+          <li><div><b>Script and shot list.</b> One idea, written as timed shots with lens, action and sound.</div></li>
+          <li><div><b>Reference sheets.</b> Cast, wardrobe, props and locations as image sheets so faces and products stay the same in every shot.</div></li>
+          <li><div><b>Keyframes.</b> First and last frames for the hard shots, checked before any video credits are spent.</div></li>
+          <li><div><b>Drafts at 480p.</b> Cheap passes to lock motion and timing, then retakes only for the shots that broke.</div></li>
+          <li><div><b>Edit to the music.</b> Cuts placed on the beat, voice and stems mixed, colour matched across shots.</div></li>
+          <li><div><b>4K finish.</b> Topaz upscale and a clean master, delivered in 16:9, 9:16 or both.</div></li>
+        </ol>
+      </div>
+      <div class="tools">
+        <div class="sec-head"><h2>Toolkit</h2></div>
+        <div><div class="label">Video</div><div class="chips"><span>Seedance 2.5</span><span>Kling 4.0</span><span>Wan 3.0</span><span>MiniMax Hailuo</span><span>Veo</span><span>Runway Aleph</span></div></div>
+        <div><div class="label">Images</div><div class="chips"><span>Nano Banana</span><span>GPT Image</span><span>Gemini</span></div></div>
+        <div><div class="label">Voice and sound</div><div class="chips"><span>ElevenLabs</span><span>Voice cloning</span><span>Demucs stem separation</span></div></div>
+        <div><div class="label">Edit and finish</div><div class="chips"><span>FFmpeg + Python</span><span>Topaz upscale</span><span>Blender previz</span></div></div>
+        <div><div class="label">Formats</div><div class="chips"><span>Brand commercials</span><span>Product films</span><span>POV stories</span><span>Character reels</span><span>Explainers</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="label" style="margin-bottom:12px">Open to full-time AI video roles</div>
+      <h2>Let's make the next one.</h2>
+      <div class="mail">
+        <code id="email">agrawalvasuforc@gmail.com</code>
+        <button class="btn primary" id="copy" type="button">Copy email</button>
+        <a class="btn" href="https://www.instagram.com/skyrunnerpov/" target="_blank" rel="noopener">Instagram ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <span>Vasu Agrawal · AI commercials and reels</span>
+  <span>Brand pieces are unpaid spec work, shown as samples.</span>
+</footer>
+
+<script>
+(function(){
+  // Only one video plays at a time.
+  var vids = Array.prototype.slice.call(document.querySelectorAll('video'));
+  vids.forEach(function(v){
+    v.addEventListener('play', function(){
+      vids.forEach(function(o){ if(o!==v && !o.paused){ o.pause(); } });
+    });
+  });
+  var btn = document.getElementById('copy');
+  var em = document.getElementById('email');
+  btn.addEventListener('click', function(){
+    var text = em.textContent.trim();
+    var done = function(){ btn.textContent = 'Copied'; setTimeout(function(){ btn.textContent = 'Copy email'; }, 1800); };
+    var fallback = function(){
+      var r = document.createRange(); r.selectNodeContents(em);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected, press Ctrl+C';
+    };
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } else { fallback(); }
+    } catch(e){ fallback(); }
+  });
+})();
+</script>
+</body>
+</html>
